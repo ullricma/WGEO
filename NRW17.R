@@ -96,15 +96,15 @@ str(d2)
 ##### Create independent variables for regression modell #####
 ##############################################################
 
-### ANT.JUNG - Anteil der 15-29-J?hrigen an der Gesamtbev?lkerung 
+### ANT.JUNG - Share of age 15-29 in population
 d2$ANT.JUNG <- (d2$A.15.29)/(d2$A.U15+d2$A.15.29+d2$A.30.49+d2$A.50.64+d2$A.65.84+d2$A.ue85)
 summary(d2$ANT.JUNG)
-### ANT.ALT: Anteil der 65+ J?hrigen an der Gesamtbev?lkerung 
+### ANT.ALT: Share of age 65+ in population
 d2$ANT.ALT <- (d2$A.65.84+d2$A.ue85)/(d2$A.U15+d2$A.15.29+d2$A.30.49+d2$A.50.64+d2$A.65.84+d2$A.ue85)
 summary(d2$ANT.ALT)
-### ANT.NQ: Anteil der Niedrigqualifizierten (Personen mit max. Pflichtschulabschluss) an der Gesamtbev?lkerung 
+### ANT.NQ: Share of low educated persons (maximum compulsory school) in population
 d2$ANT.NQ <- d2$B.Pflichtschule/(d2$B.Pflichtschule+d2$B.Lehrabschluss+d2$B.Mittlere.hoehere.Schule+d2$B.Hochschule.Akademie+d2$B.Entfaellt)
-### ANT.MIG: Anteil der MigrantInnen (Geburtsland nicht ?sterreich) an der Gesamtbev?lkerung
+### ANT.MIG: Share of migrants (country of birth not in Austria) in population
 a <- d2$B.Pflichtschule+d2$B.Lehrabschluss+d2$B.Mittlere.hoehere.Schule+d2$B.Hochschule.Akademie+d2$B.Entfaellt
 b <- d2$G.AT
 c <- 1-(b/a)
@@ -114,7 +114,7 @@ d2$ANT.MIG <- c
 ### "Back-up"-Variables ### 
 ## ANT.MIG-DRITT: Share of migrants from "third countries" (country of birth =/= Austria OR EU) 
 d2$ANT.MIG.DRITT <- (d2$G.JUGOSL+d2$G.TR+d2$G.SONST)/(d2$G.AT+d2$G.EU+d2$G.JUGOSL+d2$G.TR+d2$G.SONST)
-## ANT.AKAD: Share of People with higher education compared to complete population
+## ANT.AKAD: Share of People with higher education in complete population
 d2$ANT.AKAD <- d2$B.Hochschule.Akademie/(d2$B.Pflichtschule+d2$B.Lehrabschluss+d2$B.Mittlere.hoehere.Schule+d2$B.Hochschule.Akademie+d2$B.Entfaellt)
 
 
