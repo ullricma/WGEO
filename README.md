@@ -1,5 +1,5 @@
 # WGEO
-This project was part of semester 3 and 4 in the master degree program Socio-economics at the Vienna University of Business and Economics (WU)
+This group project was part of semester 3 and 4 in the master degree program Socio-economics at the Vienna University of Business and Economics (WU).
 
 Abstract:
 
